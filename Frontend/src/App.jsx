@@ -20,9 +20,9 @@ function App() {
   async function reviewCode() {
     try {
       const response = await axios.post(
-  "https://ai-powered-code-analyzer.onrender.com/ai/get-review",
-  { code }
-)
+        "https://ai-powered-code-analyzer.onrender.com/ai/get-review",
+        { code }
+      )
 
       setReview(response.data.review || response.data)
 
@@ -53,7 +53,7 @@ function App() {
             textareaClassName="editor-textarea"
             style={{
               fontFamily: '"Fira Code", monospace',
-              fontSize: 16,
+              fontSize: window.innerWidth < 768 ? 14 : 16,
               minHeight: "100%",
               color: "#fff"
             }}

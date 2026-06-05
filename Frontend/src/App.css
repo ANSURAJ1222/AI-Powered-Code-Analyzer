@@ -212,3 +212,105 @@ main {
   margin: 1rem 0;
   color: #cbd5e1;
 }
+
+/* ======================
+   MOBILE RESPONSIVE
+====================== */
+
+@media (max-width: 1024px) {
+
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .left {
+    min-height: 500px;
+  }
+
+  .right {
+    min-height: 400px;
+    padding: 1.2rem;
+  }
+
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 768px) {
+
+  main {
+    padding: 0.7rem;
+    gap: 0.8rem;
+  }
+
+  .left,
+  .right {
+    border-radius: 12px;
+  }
+
+  .left {
+    min-height: 420px;
+  }
+
+  .right {
+    padding: 1rem;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .review {
+    width: calc(100% - 40px);
+    right: 20px;
+    bottom: 15px;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .right h1 {
+    font-size: 1.5rem;
+  }
+
+  .right h2 {
+    font-size: 1.2rem;
+  }
+
+  .right h3 {
+    font-size: 1rem;
+  }
+
+  .right pre {
+    padding: 0.8rem;
+    font-size: 13px;
+  }
+
+}
+
+/* SMALL MOBILE DEVICES */
+
+@media (max-width: 480px) {
+
+  main {
+    padding: 0.5rem;
+  }
+
+  .left {
+    min-height: 380px;
+  }
+
+  .right {
+    padding: 0.8rem;
+  }
+
+  .review {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+}
