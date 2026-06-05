@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  background: #0f172a;
+  font-family: Inter, Arial, sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* ======================
+   LEFT PANEL
+====================== */
+
+.left,
+.right {
+  height: 100%;
+  border-radius: 16px;
+}
+
+.left {
+  flex: 1;
+  background: #111827;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #374151;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.code {
+  height: 100%;
+  width: 100%;
+}
+
+.code pre {
+  min-height: 100%;
+  margin: 0;
+}
+
+.editor-textarea {
+  outline: none;
+}
+
+/* Review Button */
+
+.review {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  padding: 12px 28px;
+
+  background: #3b82f6;
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  z-index: 100;
+}
+
+.review:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* ======================
+   RIGHT PANEL
+====================== */
+
+.right {
+  flex: 1.1;
+  background: #111827;
+  color: #e5e7eb;
+
+  overflow-y: auto;
+  padding: 2rem;
+
+  border: 1px solid #374151;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* Scrollbar */
+
+.right::-webkit-scrollbar {
+  width: 8px;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+
+/* Markdown Headings */
+
+.right h1 {
+  color: #38bdf8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+.right h2 {
+  color: #60a5fa;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.right h3 {
+  color: #93c5fd;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+
+.right p {
+  margin: 0.8rem 0;
+  color: #d1d5db;
+}
+
+/* Lists */
+
+.right ul,
+.right ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.right li {
+  margin-bottom: 0.5rem;
+}
+
+/* Inline Code */
+
+.right code {
+  background: #1e293b;
+  color: #facc15;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+}
+
+/* Code Blocks */
+
+.right pre {
+  background: #020617;
+  border: 1px solid #334155;
+  border-radius: 12px;
+
+  padding: 1rem;
+  margin: 1rem 0;
+
+  overflow-x: auto;
+}
+
+.right pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Tables */
+
+.right table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+.right th,
+.right td {
+  border: 1px solid #334155;
+  padding: 12px;
+}
+
+.right th {
+  background: #1e293b;
+  color: #38bdf8;
+}
+
+/* Blockquote */
+
+.right blockquote {
+  border-left: 4px solid #38bdf8;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #cbd5e1;
+}
